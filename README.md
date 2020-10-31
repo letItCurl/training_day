@@ -1,6 +1,23 @@
 # Training Day [![](https://img.shields.io/badge/autor-letItCurl-red.svg)](https://www.linkedin.com/in/roland-lopez-developer/?locale=en_US)
 > Ruby workout 🤠
 
+## ACTION CABLE
+
+Demo:
+- first create two users.
+- log in with the first user created.
+- run this:
+```ruby
+Notification.create(recipient: User.first, user: User.last, action: "followed", notifiable: User.first)
+```
+
+and your notification will pop into the browser !
+
+## FROM
+
+Chris GoRails video nb 125:
+[Realtime Notifications with ActionCable](https://gorails.com/episodes/realtime-notifications-with-actioncable)
+
 # About me
 
 <table style="border: none;">
