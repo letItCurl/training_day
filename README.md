@@ -1,6 +1,28 @@
 # Training Day [![](https://img.shields.io/badge/autor-letItCurl-red.svg)](https://www.linkedin.com/in/roland-lopez-developer/?locale=en_US)
 > Ruby workout 🤠
 
+## STIMULUS INTRO
+
+Simple html targing with data attrs:
+```html
+<div class="" data-controller="hello" data-hello-name="letItCurl">
+  <input data-target="hello.name" type="text" data-action="paste->hello#paste">
+  <button class="btn btn-primary" data-action="click->hello#log">LOG</button>
+</div>
+```
+
+Function in packs/controller folder that defines methods to be done in the client side.
+
+Seamless integration with webpack 💞
+```javascript
+import { Application } from 'stimulus'
+import { definitionsFromContext } from 'stimulus/webpack-helpers'
+
+const application = Application.start()
+const controller = require.context("./controllers", true, /\.js$/)
+application.load(definitionsFromContext(controller))
+```
+
 # About me
 
 <table style="border: none;">
