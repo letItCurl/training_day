@@ -26,7 +26,7 @@
 
 <%= link_to 'New Event', new_event_path %>
 
-<div class="" data-controller="hello">
-  <input data-target="hello.name" type="text">
+<div class="" data-controller="hello" data-hello-name="letItCurl">
+  <input data-target="hello.name" type="text" data-action="paste->hello#paste">
   <button class="btn btn-primary" data-action="click->hello#log">LOG</button>
 </div>
