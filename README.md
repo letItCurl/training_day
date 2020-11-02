@@ -1,6 +1,31 @@
 # Training Day [![](https://img.shields.io/badge/autor-letItCurl-red.svg)](https://www.linkedin.com/in/roland-lopez-developer/?locale=en_US)
 > Ruby workout 🤠
 
+## Drag and Drop sortable lists with Rails & Stimulus JS
+
+we used:
+- stimulus
+- ajax
+- sortablejs
+- acts_as_list gem
+- rails webpacker:install:stimulus
+
+Add this to the webpack config:
+
+```javascript
+environment.plugins.prepend('Provide',
+  new webpack.ProvidePlugin({
+    Rails: ['@rails/ujs']
+  })
+)
+```
+
+
+## FROM
+
+Chris GoRails video nb 343:
+[Drag and Drop sortable lists with Rails & Stimulus JS](https://gorails.com/episodes/rails-drag-and-drop-sortable)
+
 # About me
 
 <table style="border: none;">
