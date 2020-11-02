@@ -2,14 +2,14 @@
 
 <h1>Todos</h1>
 
-<div>
-  <% @todos.each do |todo| %>
-    <div>
-      <%= todo.description %>
+<div data-controller="drag" data-drag-url="/todos/:id/move">
+  <% @todos.order(position: :desc).each do |todo| %>
+    <div data-id="<%= todo.id %>" class='card card-body mb-4'>
+      <%= link_to todo.description, edit_todo_path(todo) %>
+      <%= link_to "delete", todo_path(todo), method: :delete %>
     </div>
   <% end %>
 </div>
 
 <br>
-
 <%= link_to 'New Todo', new_todo_path %>

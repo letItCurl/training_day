@@ -1,10 +1,15 @@
 class TodosController < ApplicationController
-  before_action :set_todo, only: [:show, :edit, :update, :destroy]
+  before_action :set_todo, only: [:show, :edit, :update, :destroy, :move]
 
   # GET /todos
   # GET /todos.json
   def index
     @todos = Todo.all
+  end
+
+  def move
+    @todo.insert_at(params[:positon].to_i)
+    head :ok
   end
 
   # GET /todos/1
@@ -69,6 +74,6 @@ class TodosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def todo_params
-      params.require(:todo).permit(:position)
+      params.require(:todo).permit(:description, :position)
     end
 end

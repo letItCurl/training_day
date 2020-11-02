@@ -14,6 +14,7 @@ class TodosTest < ApplicationSystemTestCase
     visit todos_url
     click_on "New Todo"
 
+    fill_in "Description", with: @todo.description
     fill_in "Position", with: @todo.position
     click_on "Create Todo"
 
@@ -25,6 +26,7 @@ class TodosTest < ApplicationSystemTestCase
     visit todos_url
     click_on "Edit", match: :first
 
+    fill_in "Description", with: @todo.description
     fill_in "Position", with: @todo.position
     click_on "Update Todo"
 
