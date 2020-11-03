@@ -1,6 +1,22 @@
 # Training Day [![](https://img.shields.io/badge/autor-letItCurl-red.svg)](https://www.linkedin.com/in/roland-lopez-developer/?locale=en_US)
 > Ruby workout 🤠
 
+## How to use ActionText in Rails 6
+
+- action text install
+- active storage install
+- sitmulus install
+- run migration
+- add `has_rich_text :body` to your model to add a body with rich text
+
+done ;)
+
+## FROM
+
+Chris GoRails videos ::
+[How to use ActionText in Rails 6](https://gorails.com/episodes/how-to-use-action-text)
+
+
 # About me
 
 <table style="border: none;">
